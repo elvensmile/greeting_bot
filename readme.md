@@ -46,6 +46,16 @@ Check .firebaserc, make sure that "default" field contains the id of your fireba
 "default": /*add your project id firebaseBot-xxYYx */
 ```
 
+Set environment variables with following commands:
+
+You bot token from 1.
+
+```firebase functions:config:set telegram.token="5764858329:AAF4CkbZrAZHnYeNesBEGZAAC6K0VX-1bjE"```
+
+Url of your project, usually region+firebase project id:
+
+```firebase functions:config:set telegram.url="https://us-central1-<YOURFIREBASEPROJECTID>.cloudfunctions.net/bot"```
+
 ## Greetings
 
 Feel free to modify array "greetings" in index.ts to add your own funny greetings for users.
