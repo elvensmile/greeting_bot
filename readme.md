@@ -50,7 +50,7 @@ Set environment variables with following commands:
 
 You bot token from 1.
 
-```firebase functions:config:set telegram.token="5764858329:AAF4CkbZrAZHnYeNesBEGZAAC6K0VX-1bjE"```
+```firebase functions:config:set telegram.token="<LONG_STRING_TOKEN>"```
 
 Url of your project, usually region+firebase project id:
 
