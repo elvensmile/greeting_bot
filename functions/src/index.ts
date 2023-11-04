@@ -51,7 +51,7 @@ const repliedIdsArray = <T>(arrForMutation: T[], item: T, max: number): void => 
 const getPersonalizedGreeting = (userNickname: string): string => {
     const randomGreeting =  greetings[betterRandom(0, greetings.length)];
     return randomGreeting
-        .replace('{name}', `@${userNickname}`)
+        .replace('{name}', userNickname)
 }
 
 // endregion
@@ -76,7 +76,8 @@ bot.on(message('new_chat_members'), async (ctx) => {
 
     const newMembers = ctx.message.new_chat_members;
     await newMembers.forEach((member) => {
-        const greetingMessage = getPersonalizedGreeting(member?.username ?? member?.first_name)
+        const userNickname = member?.username ? `@${member?.username}` : 'newbie';
+        const greetingMessage = getPersonalizedGreeting(userNickname)
         ctx.reply(greetingMessage, {reply_to_message_id: ctx.message.message_id});
     });
 });
@@ -89,7 +90,7 @@ bot.command('testme', (ctx) => {
     }
     repliedIdsArray(lastIds, ctx.message.message_id, 10)
     // @ts-ignore
-    const userNickname = ctx?.message?.from?.username ?? '';
+    const userNickname = ctx?.message?.from?.username ? `@${ctx?.message?.from?.username}` : 'newbie';
     if (userNickname) {
         const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
         const greetingMessage = randomGreeting

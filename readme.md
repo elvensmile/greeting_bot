@@ -14,18 +14,18 @@ Simple bot for greeting new people in your telegram group chat.
 
 Important steps before using this project:
 
-1. Create your Bot
-   Search in telegram @BotFather or open this link
-   Write the command “/newBot “
+1. Create your Bot  
+   Search in telegram @BotFather or open this [link](https://telegram.me/BotFather)  
+   Write the command “/newBot “  
    Follow all the steps
    Write down 2 things :
     - bot name (finished in ‘bot’): In example **firebaseBot**
     - Secret Token (don’t miss it): in example **LONG_STRING_TOKEN**
 
-2. Create your Firebase project
-   Go to your firebase console https://console.firebase.google.com
-   Add a new project
-   Write down the id of the project: in example **firebase-bot-xxYYx**
+2. Create your Firebase project  
+   Go to your firebase console https://console.firebase.google.com  
+   Add a new project    
+   Write down the id of the project: in example **firebase-bot-xxYYx**  
    
    Upgrade your plan to Blaze (pay-as-you-go, No-cost up to 2M/month invocations: it's about 70000 messages in day for your bot to handle )
 
